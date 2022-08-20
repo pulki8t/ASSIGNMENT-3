@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <script>
+        function displayImg(src, width, height) {
+            var img = document.createElement("img");
+            img.src = src;
+            img.width = width;
+            img.height = height;
+            document.body.appendChild(img);
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="output" onmouseover="displayImg('https://img.freepik.com/premium-photo/astronaut-outer-open-space-planet-earth-stars-provide-background-erforming-space-planet-earth-sunrise-sunset-our-home-iss-elements-this-image-furnished-by-nasa_150455-16829.jpg?w=2000' ,300,300)">Hover over me</h1>
+</body>
+
+</html>
