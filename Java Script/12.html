@@ -1,47 +1,24 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>
-        To check if the given date is weekend ?
-    </title>
-</head>
-
-<body style="text-align:center;">
-
-
-    <p id="GFG_UP" style="font-size: 15px; font-weight: bold;">
-    </p>
-
-    <button onclick="gfg_Run()">
-		Click Here
-	</button>
-
-    <p id="GFG_DOWN" style="color:green;
-		font-size: 20px; font-weight: bold;">
-    </p>
-
+    <title>Document</title>
     <script>
-        var el_up = document.getElementById("GFG_UP");
-        var el_down = document.getElementById("GFG_DOWN");
-        var date = new Date();
-
-        el_up.innerHTML = "Click on the button to " +
-            "check if the given date is Weekend" +
-            " or not.<br>Date = " + date;
-
-        function gfg_Run() {
-            var day = date.getDay();
-            var ans = (day === 6);
-
-            if (ans) {
-                ans = "Today is Weekend.";
-            } else {
-                ans = "Today is not Weekend.";
-            }
-            el_down.innerHTML = ans;
+        function input() {
+            var str = document.getElementById("input").value;
+            str = str.toLowerCase();
+            if (str == "saturday" || str == "sunday") {
+                document.write("It's a weekend");
+            } else
+                document.write("It's a weekday");
         }
     </script>
+</head>
+
+<body>
+    <input id="input" placeholder="Enter the day">
+    <button onclick="document.getElementById('output').innerHTML=input()">Find out</button>
+    <p id="output"></p>
 </body>
 
 </html>
