@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript to print Odd Numbers within a Range!</title>
+    <script>
+        function printoddNums() {
+            var start = parseInt(document.getElementById("start").value);
+            var end = parseInt(document.getElementById("end").value);
+            var oddNums = "<br>Odd Numbers:<br>";
+
+            for (i = start; i <= end; i++) {
+                if (i % 2 == 1) {
+                    oddNums += i + "<br>";
+                }
+            }
+            document.getElementById("result").innerHTML = oddNums;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>JavaScript to print Odd Numbers within a Range!</h3>
+    Start: <input type="number" min="0" id="start" value="1" /> End: <input type="number" id="end" min="1" value="20" />
+    <input type="button" onclick="printoddNums()" value="Print Odd Numbers" />
+    <div id="result"></div>
+</body>

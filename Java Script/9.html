@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript to print Numbers divisible by 3 within a Range!</title>
+    <script>
+        function printdiv() {
+            var start = parseInt(document.getElementById("start").value);
+            var end = parseInt(document.getElementById("end").value);
+            var div = "<br>Numbers divisible by 3:<br>";
+
+            for (i = start; i <= end; i++) {
+                if (i % 3 == 0) {
+                    div += i + "<br>";
+                }
+            }
+            document.getElementById("result").innerHTML = div;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>JavaScript to print Numbers divisible by 3 within a Range!</h3>
+    Start: <input type="number" min="0" id="start" value="1" /> End: <input type="number" id="end" min="1" value="20" />
+    <input type="button" onclick="printdiv()" value="Print Numbers Divisible by 3" />
+    <div id="result"></div>
+</body>
